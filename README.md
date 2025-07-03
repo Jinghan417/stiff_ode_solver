@@ -1,10 +1,10 @@
-# 🧪 Stiff ODE Solver Comparison using the Robertson Problem
+#  Stiff ODE Solver Comparison using the Robertson Problem
 
 This project implements and compares four numerical methods—Euler, Runge-Kutta 4 (RK4), Backward Euler, and Crank-Nicolson—on the classic stiff system known as the **Robertson problem**. It allows users to input two different time step sizes and visualizes the effect of step size on numerical accuracy and stability.
 
 ---
 
-## 🚀 Project Features
+##  Project Features
 
 - Implements 4 common ODE solvers
 - Supports stiff systems (nonlinear implicit solvers included)
@@ -14,7 +14,7 @@ This project implements and compares four numerical methods—Euler, Runge-Kutta
 
 ---
 
-## 🧮 The Robertson Problem
+##  The Robertson Problem
 
 This system of stiff ODEs is defined as:
 
