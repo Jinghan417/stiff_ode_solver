@@ -13,9 +13,7 @@ Users can input two different time step sizes. The script runs all four methods 
 
 The ODE used for comparison is a simple linear stiff equation:
 
-\[
-\frac{dy}{dt} = -15y + 15\cos(t)
-\]
+``dy/dt = -15y + 15*cos(t)``
 
 with initial condition \( y(0) = 0 \). This equation exhibits stiffness due to the large negative coefficient, making it suitable for evaluating solver performance on stiff problems.
 
