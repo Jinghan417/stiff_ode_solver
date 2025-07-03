@@ -1,34 +1,36 @@
-# Stiff ODE Solver Comparison: The Robertson Problem
+# Stiff ODE Solver Comparison
 
-This project implements and compares four numerical solvers for stiff ordinary differential equations (ODEs) using the classic **Robertson problem** as a benchmark. The solvers included are:
+This project implements and compares four numerical solvers for stiff ordinary differential equations (ODEs) using a simplified linear test equation as a benchmark. The solvers included are:
 
 - Forward Euler  
-- Runge-Kutta 4 (RK4)  
+- Runge–Kutta 4 (RK4)  
 - Backward Euler  
-- Crank-Nicolson  
+- Crank–Nicolson  
 
-Users can input two different time step sizes. The script runs all four methods with both step sizes and generates side-by-side plots to compare solution behavior, accuracy, and stability under varying temporal resolution.
+Users can input two different time step sizes. The script runs all four methods with both step sizes and generates side-by-side plots to compare solution behavior, accuracy, and stability.
 
-## Problem Definition
+## Test Equation
 
-The Robertson problem is a well-known stiff ODE system defined by the following equations:
+The ODE used for comparison is a simple linear stiff equation:
 
+\[
+\frac{dy}{dt} = -15y + 15\cos(t)
+\]
 
-With initial conditions:  
-y₁(0) = 1, y₂(0) = 0, y₃(0) = 0
+with initial condition \( y(0) = 0 \). This equation exhibits stiffness due to the large negative coefficient, making it suitable for evaluating solver performance on stiff problems.
 
 ## Features
 
-- Modular solver implementations in Python (`methods/` directory)
-- Input prompts for time interval and two custom step sizes
-- Automatic visualization of all methods on two figures (one per step size)
-- Designed for clear benchmarking and educational comparison
+- Modular solver implementations in Python (`methods/` directory)  
+- Interactive input for time interval and two custom step sizes  
+- Automatic visualization of results for both time steps  
+- Designed for educational use and benchmarking solver stability  
 
 ## Requirements
 
-- Python 3.7+
-- `matplotlib`
-- `numpy`
+- Python 3.7+  
+- `matplotlib`  
+- `numpy`  
 
 Install dependencies with:
 
