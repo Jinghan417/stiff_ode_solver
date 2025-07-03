@@ -1,45 +1,36 @@
-<<<<<<< HEAD
-# 🧪 Stiff ODE Solver Comparison using the Robertson Problem
-=======
-#  Stiff ODE Solver Comparison using the Robertson Problem
->>>>>>> 991b8c544965b2347c3d33998ec9761728323cf4
+# Stiff ODE Solver Comparison: The Robertson Problem
 
-This project implements and compares four numerical methods—Euler, Runge-Kutta 4 (RK4), Backward Euler, and Crank-Nicolson—on the classic stiff system known as the **Robertson problem**. It allows users to input two different time step sizes and visualizes the effect of step size on numerical accuracy and stability.
+This project implements and compares four numerical solvers for stiff ordinary differential equations (ODEs) using the classic **Robertson problem** as a benchmark. The solvers included are:
 
----
+- Forward Euler  
+- Runge-Kutta 4 (RK4)  
+- Backward Euler  
+- Crank-Nicolson  
 
-<<<<<<< HEAD
-## 🚀 Project Features
-=======
-##  Project Features
->>>>>>> 991b8c544965b2347c3d33998ec9761728323cf4
+Users can input two different time step sizes. The script runs all four methods with both step sizes and generates side-by-side plots to compare solution behavior, accuracy, and stability under varying temporal resolution.
 
-- Implements 4 common ODE solvers
-- Supports stiff systems (nonlinear implicit solvers included)
-- Accepts two user-defined step sizes at runtime
-- Creates side-by-side plots of solver results for comparison
-- Uses Python and `matplotlib` for visualization
+## Problem Definition
 
----
+The Robertson problem is a well-known stiff ODE system defined by the following equations:
 
-<<<<<<< HEAD
-## 🧮 The Robertson Problem
-=======
-##  The Robertson Problem
->>>>>>> 991b8c544965b2347c3d33998ec9761728323cf4
 
-This system of stiff ODEs is defined as:
+With initial conditions:  
+y₁(0) = 1, y₂(0) = 0, y₃(0) = 0
 
-\[
-\begin{cases}
-\frac{dy_1}{dt} = -0.04 y_1 + 10^4 y_2 y_3 \\
-\frac{dy_2}{dt} = 0.04 y_1 - 10^4 y_2 y_3 - 3 \times 10^7 y_2^2 \\
-\frac{dy_3}{dt} = 3 \times 10^7 y_2^2
-\end{cases}
-\]
+## Features
 
-Initial conditions:
-```python
-y0 = [1.0, 0.0, 0.0]
-t0 = 0
-t_end = 1e3
+- Modular solver implementations in Python (`methods/` directory)
+- Input prompts for time interval and two custom step sizes
+- Automatic visualization of all methods on two figures (one per step size)
+- Designed for clear benchmarking and educational comparison
+
+## Requirements
+
+- Python 3.7+
+- `matplotlib`
+- `numpy`
+
+Install dependencies with:
+
+```bash
+pip install matplotlib numpy
