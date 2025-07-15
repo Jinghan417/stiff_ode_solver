@@ -28,9 +28,8 @@ with initial condition \( y(0) = 0 \). This equation exhibits stiffness due to t
 
 - Python 3.7+  
 - `matplotlib`  
-- `numpy`  
+
 
 Install dependencies with:
 
-```bash
-pip install matplotlib numpy
+
